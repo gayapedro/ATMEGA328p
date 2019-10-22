@@ -1,3 +1,4 @@
+.include "/usr/share/avra/m328Pdef.inc"
 .ORG 0x0000
 RJMP main
 
@@ -14,7 +15,7 @@ loop:
 	RJMP loop
 
 atraso:
-	LDI r19, 16 //aprox 200ms
+	LDI r19, 16
 
 volta:
 	DEC r17
