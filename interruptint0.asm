@@ -1,4 +1,8 @@
-.include "/usr/share/avra/m328Pdef.inc"
+; interruptint0.asm
+; Autor: Pedro Gaya (pedrogaya@gmail.com)
+; github: gayapedro
+
+.include "./m328Pdef.inc"
 .org 0x00						
 rjmp reset
 .org INT0addr

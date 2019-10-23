@@ -1,4 +1,8 @@
-.include "/usr/share/avra/m328Pdef.inc"
+; blink.asm
+; Autor: Pedro Gaya (pedrogaya@gmail.com)
+; github: gayapedro
+
+.include "./m328Pdef.inc"
 .equ LED = PB5
 .ORG 0x0000
 
@@ -14,7 +18,7 @@ RCALL atraso
 RJMP main
 
 atraso:
-LDI r19,120
+LDI r19,32
 
 delay:
 DEC r17

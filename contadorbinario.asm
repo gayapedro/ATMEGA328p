@@ -1,4 +1,8 @@
-.include "/usr/share/avra/m328Pdef.inc"
+; contadorbinario.asm
+; Autor: Pedro Gaya (pedrogaya@gmail.com)
+; github: gayapedro
+
+.include "./m328Pdef.inc"
 .ORG 0x0000
 RJMP main
 

@@ -1,4 +1,8 @@
-.include "/usr/share/avra/m328Pdef.inc"
+; display7segmentos.asm
+; Autor: Pedro Gaya (pedrogaya@gmail.com)
+; github: gayapedro
+
+.include "./m328Pdef.inc"
 .equ BOTAO = PD2
 .equ DISPLAY = PortB
 .def AUX = r16
