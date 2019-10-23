@@ -34,7 +34,7 @@ PCINT0_vect:
 	ldi r18, 0xFF
 	eor r17,r18
 	out PortD, r17
-    ;RCALL atraso
+    RCALL atraso
 	saida:
     RETI
 
