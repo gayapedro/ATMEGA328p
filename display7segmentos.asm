@@ -1,16 +1,17 @@
-.equ BOTAO = PB0
-.equ DISPLAY = PortD
+.include "/usr/share/avra/m328Pdef.inc"
+.equ BOTAO = PD2
+.equ DISPLAY = PortB
 .def AUX = r16
 .ORG 0x0000
 RJMP main
 
 main:
-	LDI AUX,0b11111110
-	OUT DDRB,AUX
-    LDI AUX,0xFF
-	OUT PortB,AUX
+	LDI AUX,0x00
 	OUT DDRD,AUX
+    LDI AUX,0xFF
 	OUT PortD,AUX
+	OUT DDRB,AUX
+	OUT PortB,AUX
 
 loop:
 	SBIS PinB,BOTAO
