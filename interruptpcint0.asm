@@ -15,16 +15,13 @@ reset:
 	out PCIFR, r16
     ldi r16, (1<<PCINT0)
     sts PCMSK0, r16
-
 	; Sets PORTB as input						
  	ldi r17, 0x00			
 	out DDRB, r17
 	out PortB, r17
-
 	ldi r17, 0xFF
 	out DDRD, r17
 	out PortD, r17
-
 	; Global Enable Interrupt
 	sei		
 
@@ -43,7 +40,6 @@ PCINT0_vect:
 
 atraso:
 	LDI r19, 16
-
 volta:
 	DEC r20
 	BRNE volta

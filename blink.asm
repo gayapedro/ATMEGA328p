@@ -3,17 +3,19 @@
 ; github: gayapedro
 
 .include "./m328Pdef.inc"
-.equ LED = PB5
-.ORG 0x0000
+.equ LED = PD0
+.ORG 0x00
 
 inicio:
+LDI r16,r10
+STS UCSR0B,r16
 LDI r16,0xFF
-OUT DDRB,r16
+OUT DDRD,r16
 
 main:
-SBI PortB,LED
+SBI PortD,LED
 RCALL atraso
-CBI PortB,LED
+CBI PortD,LED
 RCALL atraso
 RJMP main
 

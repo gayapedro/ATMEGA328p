@@ -5,10 +5,11 @@
 .include "./m328Pdef.inc"
 .org 0x00						
 rjmp reset
-.org INT0addr
+.org 0x0002
 rjmp INT0_vect
 				 
 reset:
+	; Configura o EICRA
 	ldi r16, (1<<ISC01)|(1<<ISC00)	
 	sts EICRA, r16					
 	

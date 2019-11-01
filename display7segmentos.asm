@@ -16,6 +16,7 @@ main:
 	OUT PortD,AUX
 	OUT DDRB,AUX
 	OUT PortB,AUX
+	STS UCSR0B,R1
 
 loop:
 	SBIS PinB,BOTAO
@@ -56,5 +57,4 @@ le_tab:
 	LPM R0,Z
 	OUT DISPLAY,R0
 	RET
-
 Tabela: .dw 0x063F, 0x4F5B, 0x6D66, 0x077D, 0x6F7F, 0x7C77, 0x5E39, 0x7179
